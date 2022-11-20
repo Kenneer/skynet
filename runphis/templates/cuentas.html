@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+        {% block content %}
+{% for perfils in cuentas %}
+
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    Cuenta de Free Fire
+  </a>
+  <a href="#" class="list-group-item list-group-item-action"><strong>Correo:</strong> {{ perfils.correo }}</a>
+  <a href="#" class="list-group-item list-group-item-action"><strong>Contraseña:</strong> {{ perfils.passwordi}}</a>
+       </div>
+
+               {% endfor %}
+{% endblock %}
