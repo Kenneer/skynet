@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'Nicaphis.wsgi.application'
     #}
 #}
 
-Database
+#Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
