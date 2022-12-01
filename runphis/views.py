@@ -3,21 +3,12 @@ from decimal import *
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
-from django.conf.urls.static import static
 from django.contrib.auth import login, logout, authenticate
 from .models import perfilnk, cuentas
 from .forms import perfilform
 
 
-
-
-
 # Create your views here.
-
-def home():
-  return redirect('/signin')
-
-
 def signup(request):
 	if request.method == 'GET':
 		return render(request, 'signup.html')
@@ -32,7 +23,9 @@ def signup(request):
 				return render(request, 'signup.html',{"error":"el usuario ya existe"})
 		return render(request, 'signup.html',{"error":"las contraseñas no coinciden"})
 
-#return redirect('home')
+
+
+
 
 def signin(request):
 	if request.method == 'GET':
@@ -44,6 +37,11 @@ def signin(request):
 		else:
 			login(request, user)
 			return redirect('perfil')
+
+def signout(request):
+	logout(request)
+	return redirect('signin')
+
 
 
 def perfil(request):
@@ -58,7 +56,7 @@ def perfil(request):
 		dataperfil = perfilnk.objects.filter(user=request.user)
 		formperfil = list(dataperfil)
 		counp = len(formperfil)
-# 		dataperfil = perfil.objects.filter(user=request.user)
+
 		perfilsave = perfilform(request.POST)
 		new_perfil = perfilsave.save(commit=False)
 		idra= random.random()*1000000
@@ -70,10 +68,23 @@ def perfil(request):
 			print ('el codigo ya existe vuelve a enviar los datos')
 		else:
 			new_perfil.codigo=red
-			new_perfil.desayuno=False
+			#new_perfil.desayuno=False
 			new_perfil.user = request.user
 			new_perfil.save()
 		return redirect('perfil')
+
+
+
+def home(request):
+  return render(request, 'index.html')
+
+
+def cuenta_hack(request):
+	dataperfil = perfilnk.objects.filter(user=request.user)
+	for i in dataperfil:
+		datacuentas = cuentas.objects.filter(codigo=i.codigo)
+	return render(request,'cuentas.html',{'cuentas':datacuentas})
+
 
 
 def diamantes(request, diamantes_id):
@@ -89,15 +100,3 @@ def diamantes(request, diamantes_id):
 		formcuentas.save()
 		return render(request, 'diamantes.html',{'datox':diamantes_id})
 
-
-def cuenta_hack(request):
-	dataperfil = perfilnk.objects.filter(user=request.user)
-	for i in dataperfil:
-		datacuentas = cuentas.objects.filter(codigo=i.codigo)
-	return render(request,'cuentas.html',{'cuentas':datacuentas})
-
-
-
-def signout(request):
-	logout(request)
-	return redirect('signin')

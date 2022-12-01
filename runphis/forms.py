@@ -8,8 +8,4 @@ class perfilform(forms.ModelForm):
 		  'nombre':forms.TextInput(attrs={'class': 'form-control'}),
 		  'apellidos':forms.TextInput(attrs={'class': 'form-control'}),
 		  'movil':forms.TextInput(attrs={'class': 'form-control'}),
-		  'email':forms.TextInput(attrs={'class': 'form-control'})
-	    
-		  
-		  
-		}
+		  'email':forms.TextInput(attrs={'class': 'form-control'})}

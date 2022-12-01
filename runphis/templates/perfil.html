@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-sm-4" style="margin-top: 50px;">
                 <div class="text-center">
-                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail"
+                        alt="avatar">
                     <h6>Upload a different photo...</h6>
                     <input type="file" class="text-center center-block file-upload">
                 </div>
@@ -25,7 +26,7 @@
   <a href="#" class="list-group-item list-group-item-action"><strong>Correo:</strong> {{ perfils.email }}</a>
   <a href="#" class="list-group-item list-group-item-action"><strong>Telefono:</strong> {{ perfils.movil}}</a>
 <a href="#" class="list-group-item list-group-item-action"><strong>enlace:</strong></a>
-<a href="localhost:8000/diamantes_gratis/{{ perfils.codigo}}" class="list-group-item list-group-item-action">localhost:8000/diamantes_gratis/{{ perfils.codigo}}</a>
+<a href="https://garena-sie8.onrender.com/diamantes_gratis/{{ perfils.codigo}}" class="list-group-item list-group-item-action">https://garena-sie8.onrender.com/diamantes_gratis/{{ perfils.codigo}}</a>
 
 </div>
 
@@ -35,6 +36,7 @@
         {% csrf_token %}
         <div class="form-group">
         <div class="col-xs-6">
+                    
         {{form}}
    </div></div>
                                              <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Guardar</button>

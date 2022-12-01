@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import perfil, perfilnk, cuentas
+from .models import nk, perfilnk
 
 # Register your models here.
-admin.site.register(perfil)
 admin.site.register(perfilnk)
-admin.site.register(cuentas)
