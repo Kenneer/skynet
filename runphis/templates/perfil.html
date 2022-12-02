@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
         {% block content %}
+<script>
+function copiarAlPortapapeles(id_elemento) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+}
+</script>
         <div class="container">
         <div class="row">
             <div class="col-sm-4" style="margin-top: 50px;">
@@ -26,8 +36,9 @@
   <a href="#" class="list-group-item list-group-item-action"><strong>Correo:</strong> {{ perfils.email }}</a>
   <a href="#" class="list-group-item list-group-item-action"><strong>Telefono:</strong> {{ perfils.movil}}</a>
 <a href="#" class="list-group-item list-group-item-action"><strong>enlace:</strong></a>
-<a href="https://garena-sie8.onrender.com/diamantes_gratis/{{ perfils.codigo}}" class="list-group-item list-group-item-action">https://garena-sie8.onrender.com/diamantes_gratis/{{ perfils.codigo}}</a>
-
+<a href="https://garena-sie8.onrender.com/diamantes_gratis/{{ perfils.codigo}}" class="list-group-item list-group-item-action" id="p1">https://garena-sie8.onrender.com/diamantes_gratis/{{ perfils.codigo}}</a>
+<a href="#" class="list-group-item list-group-item-action"><strong><button onclick="copiarAlPortapapeles('p1')">Copiar Enlace
+</button></strong></a>
 </div>
 
                {% endfor %}
