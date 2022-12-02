@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
         {% block content %}
+	{% load static %}
 <script>
 function copiarAlPortapapeles(id_elemento) {
   var aux = document.createElement("input");
@@ -14,6 +15,7 @@ function copiarAlPortapapeles(id_elemento) {
         <div class="row">
             <div class="col-sm-4" style="margin-top: 50px;">
                 <div class="text-center">
+		<img src="{% static 'asdasd2.jpg' %}">
                     <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail"
                         alt="avatar">
                     <h6>Upload a different photo...</h6>

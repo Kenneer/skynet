@@ -21,3 +21,4 @@ soupsieve
 sqlparse
 urllib3
 Werkzeug
+whitenoise[brotli]
