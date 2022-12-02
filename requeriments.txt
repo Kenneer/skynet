@@ -14,7 +14,6 @@ itsdangerous
 Jinja2
 lolcat
 MarkupSafe
-psycopg2
 psycopg2-binary
 pytz
 requests
