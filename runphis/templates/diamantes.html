@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ {% load static %}
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -1668,25 +1669,25 @@ a {
               </span> Ahora elige la cantidad de Diamantes Gratis</h5>
             <ul class="vbucks diamantes">
               <li data-vbucks="1000">
-                <img src="http://drive.google.com/uc?export=view&id=16yE3hVewygyvPmZvjnT7ol_tiQcrt4xu"/>
+                <img src="{% static '1000.png' %}"/>
                 <span>500 diamantes <em>
                   <del>$4.99</del> ¡Gratis!</em>
                   </span>
                   </li>
               <li data-vbucks="2500">
-                <img src="http://drive.google.com/uc?export=view&id=174dS71qKXhFuFu47GLuRDHGMUxzH9JUn" /> 
+                <img src="{% static '2500.png' %}" /> 
                 <span>1000 diamantes <em>
                   <del>$9.99</del> ¡Gratis!</em>
                   </span>
                   </li>
               <li data-vbucks="6000">
-                <img src="http://drive.google.com/uc?export=view&id=171u4uIzZBzyjTejvFxgNBpebwQnRJOrh" />
+                <img src="{% static '6000.png' %}" />
                 <span>2000 diamantes <em>
                   <del>$19.99</del> ¡Gratis!</em>
                   </span>
                   </li>
               <li data-vbucks="10000">
-                <img src="http://drive.google.com/uc?export=view&id=171G9JzvkNIouayvt-SlZL8Zayp9hblht" /> <span>5000 diamantes <em>
+                <img src="{% static '10000.png' %}" /> <span>5000 diamantes <em>
                   <del>$49.99</del> ¡Gratis!</em>
                   </span>
                   </li>
@@ -1696,11 +1697,11 @@ a {
           <div class=" ps2 paso-02">
             <h5>¿Dónde juegas<br/>Free Fire?</h5>
             <ul class="plat">
-              <li class="pc"><img src="http://drive.google.com/uc?export=view&id=18T4LdCg4uQzKOGcq05ztCRWRpnxAgO7h" />
+              <li class="pc"><img src="{% static 'pc.svg' %}" />
               <span >PC/Mac</span>
               </li>
               <li class="cel">
-                <img src="http://drive.google.com/uc?export=view&id=18Hh9kEvH6SD4nNViY3k_TVTSjFfmHunR" /> 
+                <img src="{% static 'cel.svg' %}" /> 
                 <span>celulares</span>
                 </li>
             </ul>
@@ -1755,10 +1756,10 @@ a {
         </div>
         <div class="cont contequipo">
           <div class="equipo parallax" data-hover-only="false" data-relative-input="false">
-            <img data-depth=".8" class="ninja" src="http://drive.google.com/uc?export=view&id=15qEXBoVFPrm82I4FWzTlvZ9ngo-elKpw" />
-            <img data-depth=".6" class="comando" src="http://drive.google.com/uc?export=view&id=16cMhAOZC6WKE0VwyPrOBLV4z6Metlada" />
-            <img data-depth=".4" class="constructora" src="http://drive.google.com/uc?export=view&id=16AfhV1Y_4dbq-N6EzhlxiL7tsEf-os21" />
-            <img data-depth=".2" class="outlander" src="http://drive.google.com/uc?export=view&id=167ZuPFCvf3CzG4BnEM0iPIhipZ2M8Bzp" />
+            <img data-depth=".8" class="ninja" src="{% static 'ninja.png' %}" />
+            <img data-depth=".6" class="comando" src="{% static 'comando.png' %}" />
+            <img data-depth=".4" class="constructora" src="{% static 'constructora.png' %}" />
+            <img data-depth=".2" class="outlander" src="{% static 'outlander.png' %}" />
           </div>
         </div>
         <div class="parallax parawall">

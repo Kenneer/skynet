@@ -74,8 +74,8 @@ WSGI_APPLICATION = 'Nicaphis.wsgi.application'
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 """
+
 DATABASES = {
 	'default': dj_database_url.config(
 	default='postgresql://postgres:postgres@localhost:5432/mysite',
